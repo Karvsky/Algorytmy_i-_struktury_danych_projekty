@@ -1,9 +1,6 @@
 import random
 import sys
 
-def generuj_tablice(n):
-    tablica = [random.randint(-sys.maxsize-1, sys.maxsize) for i in range(n)]
-    return tablica
 
 def partition_left(arr, low, high):
     pivot = arr[low]
@@ -38,14 +35,4 @@ def quick_sort(arr, low, high, pivot_choice="left"):
         quick_sort(arr, low, pivot_index - 1, pivot_choice)
         quick_sort(arr, pivot_index + 1, high, pivot_choice)
 
-pom1 = arr
 
-print("Przed sortowaniem:", arr)
-
-quick_sort(arr, 0, len(arr) - 1, pivot_choice="left")
-print("Po sortowaniu z pivota lewego:", arr)
-
-arr = pom1
-
-quick_sort(arr, 0, len(arr) - 1, pivot_choice="random")
-print("Po sortowaniu z pivota losowego:", arr)
