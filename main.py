@@ -4,7 +4,8 @@ from generowanie import *
 sys.path.append(os.path.join(os.path.dirname(__file__), 'sortowanie'))
                 
 from sortowanie.shell_sort import *
-from sortowanie.quick_sort import *
+from sortowanie.quick_sort_with_left_pivot import *
+from sortowanie.quick_sort_with_random_pivot import *
 from sortowanie.insertion_sort import *
 from sortowanie.selection_sort import *
 
@@ -29,7 +30,6 @@ elif generator == "a_shaped":
     s = a_shaped(m)
 
 arr = s
-pom1 = arr
 
 print("Przed sortowaniem: ", s)
 
@@ -39,12 +39,10 @@ print("Po sortowaniu: ", insertion_sort(s))         #algorytm insertion sort
 
 print("Po sortowaniu: ", selection_sort(s))         #algorytm selection sort
 
-quick_sort(arr, 0, len(arr) - 1, pivot_choice="left")       
+quick_sort_with_left_pivot(arr, 0, len(arr) - 1, pivot_choice="left")           #sortowanie quick sort z lewym pivotem
 print("Po sortowaniu z pivota lewego:", arr)
 
-arr = pom1
-
-quick_sort(arr, 0, len(arr) - 1, pivot_choice="random")
+quick_sort_with_random_pivot(arr, 0, len(arr) - 1, pivot_choice="random")       #sortowanie quick sort z randomowym pivotem
 print("Po sortowaniu z pivota losowego:", arr)
 
 
