@@ -31,3 +31,8 @@ def quick_sort_with_left_pivot(arr, low, high, pivot_choice="left"):
         pivot_index = partition_left(arr, low, high)
         quick_sort_with_left_pivot(arr, low, pivot_index - 1, pivot_choice)
         quick_sort_with_left_pivot(arr, pivot_index + 1, high, pivot_choice)
+
+def quick_sort_left_pivot(arr):
+    pom1 = arr
+    quick_sort_with_left_pivot(pom1, 0, len(pom1) - 1, pivot_choice="left")
+    return pom1

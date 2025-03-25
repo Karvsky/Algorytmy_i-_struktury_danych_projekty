@@ -39,11 +39,13 @@ print("Po sortowaniu: ", insertion_sort(s))         #algorytm insertion sort
 
 print("Po sortowaniu: ", selection_sort(s))         #algorytm selection sort
 
-quick_sort_with_left_pivot(arr, 0, len(arr) - 1, pivot_choice="left")           #sortowanie quick sort z lewym pivotem
-print("Po sortowaniu z pivota lewego:", arr)
+quick_sort_left_pivot(arr)
+a = quick_sort_left_pivot(arr)        #sortowanie quick sort z lewym pivotem
+print("Po sortowaniu z pivota lewego:", a)
 
-quick_sort_with_random_pivot(arr, 0, len(arr) - 1, pivot_choice="random")       #sortowanie quick sort z randomowym pivotem
-print("Po sortowaniu z pivota losowego:", arr)
+quick_sort_random_pivot(arr)
+a = quick_sort_random_pivot(arr)   #sortowanie quick sort z randomowym pivotem
+print("Po sortowaniu z pivota losowego:", a)
 
 
 

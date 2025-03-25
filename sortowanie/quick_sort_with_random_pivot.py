@@ -31,3 +31,8 @@ def quick_sort_with_random_pivot(arr, low, high, pivot_choice="left"):
         pivot_index = partition_random(arr, low, high)
         quick_sort_with_random_pivot(arr, low, pivot_index - 1, pivot_choice)
         quick_sort_with_random_pivot(arr, pivot_index + 1, high, pivot_choice)
+
+def quick_sort_random_pivot(arr):
+    pom1 = arr
+    quick_sort_with_random_pivot(pom1, 0, len(pom1) - 1, pivot_choice="random")
+    return pom1
