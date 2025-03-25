@@ -7,8 +7,8 @@ from sortowanie.shell_sort import *
 from sortowanie.insertion_sort import *
 from sortowanie.selection_sort import *
 from sortowanie.heap_sort import *
-from sortowanie.quick_sort_with_left_pivot import *
-from sortowanie.quick_sort_with_random_pivot import *
+from sortowanie.quick_sort_left_pivot import *
+from sortowanie.quick_sort_random_pivot import *
 
 m = int(input("Podaj długość zbioru: "))
 
