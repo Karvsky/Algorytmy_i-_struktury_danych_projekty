@@ -10,7 +10,7 @@ benchmark() {
     runjava=""
     runpython=""
     runcpp=""
-    runexample="python3 example.py"
+    runexample="python3 sorting.py"
     runcurrent=$runexample
 
     echo "Benchmarking Algorithm $algorithm with input $input_file"
@@ -43,8 +43,7 @@ done
 
 
 # List of input file types
-#input_files=("random_array" "increasing_array" "decreasing_array" "constant_array" "a_shaped_array")
-input_files=("random_array")
+input_files=("random_array" "increasing_array" "decreasing_array" "constant_array" "a_shaped_array")
 
 # Create or clear the CSV file
 echo "Algorithm,InputSize,Time" > benchmark_results.csv
