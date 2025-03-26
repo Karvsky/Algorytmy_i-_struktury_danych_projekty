@@ -55,7 +55,7 @@ elif generator == "5":
     s = a_shaped(m)
 
 os.system('clear')
-print("----Program sortujący---- \n-------------------------\n \nPrzed sortowaniem: ", s ,"\n")
+print("----Program sortujący---- \n-------------------------\n \nPrzed sortowaniem: ", s ,"\n\n-------------------------\n")
 
 
 if sort == "1":
