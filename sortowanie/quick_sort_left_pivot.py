@@ -1,6 +1,7 @@
 import random
 import sys
 
+sys.setrecursionlimit(10**6) 
 
 def partition_left(arr, low, high):
     pivot = arr[low]

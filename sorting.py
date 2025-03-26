@@ -7,6 +7,8 @@ from sortowanie.heap_sort import *
 from sortowanie.insertion_sort import *
 from sortowanie.selection_sort import *
 from sortowanie.shell_sort import *
+from sortowanie.quick_sort_left_pivot import *
+from sortowanie.quick_sort_random_pivot import *    
 
 def sort_using_algorithm(data, algorithm):
     # This function takes the algorithm identifier as input
@@ -20,8 +22,10 @@ def sort_using_algorithm(data, algorithm):
         sorted_data = selection_sort(data)
     elif algorithm == 4:
         sorted_data = heap_sort(data)
-    else:
-        sorted_data = sorted(data)
+    elif algorithm == 5:
+        sorted_data = quick_sort_left_pivot(data)
+    elif algorithm == 6:
+        sorted_data = quick_sort_random_pivot(data)
     return sorted_data
 
 def main():
