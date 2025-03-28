@@ -22,10 +22,6 @@ def partition_left(arr, low, high):
     arr[low], arr[right] = arr[right], arr[low]
     return right
 
-def partition_random(arr, low, high):
-    pivot_index = random.randint(low, high)
-    arr[low], arr[pivot_index] = arr[pivot_index], arr[low]
-    return partition_left(arr, low, high)
 
 def quick_sort_with_left_pivot(arr, low, high, pivot_choice="left"):
     if low < high:
